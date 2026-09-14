@@ -1,34 +1,145 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Georgia, serif;
   margin: 0;
-  padding: 20px;
+  padding: 30px;
+  background-color: #1e1b2e;
+  color: #f4e9d8;
+}
+
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  color: #e8c77b;
+  margin-bottom: 35px;
+}
+
+h2 {
+  margin-top: 35px;
+  color: #e8c77b;
+  border-bottom: 1px solid #8f7aa8;
+  padding-bottom: 8px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #29243d;
+  border: 1px solid #8f7aa8;
+  border-radius: 12px;
 }
 
 label {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
+  font-weight: bold;
 }
 
 input,
 select,
 button {
-  padding: 8px;
+  padding: 10px;
+  font-family: Georgia, serif;
   font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #8f7aa8;
+}
+
+input,
+select {
+  background-color: #1e1b2e;
+  color: #f4e9d8;
 }
 
 button {
+  margin-top: 5px;
+  background-color: #6d4c8d;
+  color: #f4e9d8;
   cursor: pointer;
+  border: none;
+  font-weight: bold;
 }
 
-p {
+button:hover {
+  background-color: #8663a8;
+}
+
+.spell-card {
+  padding: 18px;
+  margin: 12px 0;
+  background-color: #29243d;
+  border: 1px solid #8f7aa8;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s, background-color 0.15s;
+  position: relative;
+}
+
+.spell-card:hover {
+  background-color: #352e4d;
+  transform: translateY(-2px);
+}
+
+
+.spell-card::after {
+  content: "Click to delete";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: #1e1b2e;
+  color: #e8c77b;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.spell-card:hover::after {
+  opacity: 1;
+}
+
+.spell-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #e8c77b;
+  font-size: 22px;
+}
+
+.spell-card p {
+  margin: 5px 0;
+}
+
+.error {
   margin: 0;
+  color: #ff8f8f;
 }
 
+.search-section {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #29243d;
+  border: 1px solid #8f7aa8;
+  border-radius: 12px;
+}
+
+.search-section h3 {
+  margin-top: 0;
+  color: #e8c77b;
+}
+
+.search-section input {
+  width: 100%;
+  box-sizing: border-box;
+}
